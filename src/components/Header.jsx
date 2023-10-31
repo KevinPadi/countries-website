@@ -16,7 +16,7 @@ function Header () {
   }
 
   return (
-    <header className='bg-white dark:bg-darkBlue w-full h-20 drop-shadow-md fixed'>
+    <header className='bg-white dark:bg-darkBlue w-full h-20 drop-shadow-md fixed z-50'>
       <div className='w-full h-full flex justify-between items-center px-5 sm:px-10 md:px-20'>
         <h1 className='text-veryDarkBlue dark:text-white font-bold text-sm sm:text-xl'>Where in the world?</h1>
         <button onClick={changeTheme} className='text-veryDarkBlue dark:text-white font-semibold flex justify-center items-center gap-2 text-sm sm:text-lg'>
