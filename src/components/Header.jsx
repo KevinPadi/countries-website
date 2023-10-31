@@ -13,7 +13,6 @@ function Header () {
       document.documentElement.classList.add('dark')
       setToggleTheme('dark')
     }
-    console.log(document.documentElement.classList)
   }
 
   return (
