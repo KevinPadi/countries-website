@@ -5,7 +5,7 @@ function SearchBar () {
     // Puedes agregar aquí la lógica de búsqueda
   }
   return (
-    <div className='w-full sm:w-[350px] lg:w-[450px] relative'>
+    <div className='w-full sm:w-[330px] lg:w-[450px] relative'>
       <input type='text' name='country' className='bg-white dark:bg-darkBlue w-full h-10 px-20 py-7 block placeholder:text-sm placeholder:text-darkGray placeholder:dark:text-white placeholder:font-semibold font-semibold rounded-md drop-shadow-md' placeholder='Search for a country...' />
       <button
         onClick={handleSearch} className='absolute inset-y-0 left-5 flex items-center pl-3 pointer'
