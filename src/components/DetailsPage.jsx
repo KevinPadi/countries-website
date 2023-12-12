@@ -13,7 +13,6 @@ function DetailsPage () {
       .then(response => response.json())
       .then(data => {
         setCountryData(data)
-        console.log(data[0].flags)
       })
       .catch(error => {
         console.error('Hubo un error al obtener los datos:', error)
