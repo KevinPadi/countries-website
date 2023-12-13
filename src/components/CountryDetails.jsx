@@ -1,5 +1,5 @@
-import React from 'react'
 import Button from './Button'
+import { useState, useEffect } from 'react'
 
 function CountryDetails ({ data: { name, population, region, subregion, capital, currencies, languages, borders, tld } }) {
   const capitalName = capital.length !== 0 ? capital : 'None'
@@ -10,7 +10,22 @@ function CountryDetails ({ data: { name, population, region, subregion, capital,
   const populationFormated = population.toLocaleString('en-US')
   const currencyName = currencies && Object.values(currencies)[0] !== undefined ? Object.values(currencies)[0].name : 'None'
   const languagesList = languages && Object.values(languages)[0] !== undefined ? Object.values(languages).join(', ') : 'None'
+  const [bordersCountries, setBordersCountries] = useState([])
 
+  useEffect(() => {
+    if (borders.length > 1) {
+      fetch(`https://restcountries.com/v3.1/alpha?codes=${borders.join(',')},?fields=name`)
+        .then(response => response.json())
+        .then(data => {
+          setBordersCountries(data)
+        })
+        .catch(error => {
+          console.error('Hubo un error al obtener los datos:', error)
+        })
+    }
+  }, [borders])
+
+  console.log(bordersCountries ? bordersCountries.map((country) => console.log(country.name.common)) : 'none')
   return (
     <div className='w-full'>
       <h2 className='text-3xl font-extrabold mb-6'>{name.common}</h2>
@@ -47,14 +62,12 @@ function CountryDetails ({ data: { name, population, region, subregion, capital,
         </div>
       </div>
       <div>
-        <div className='flex items-center flex-col sm:flex-row gap-5 lg:gap-2'>
+        <div className='flex lg:w-full items-center flex-col sm:flex-row gap-5 lg:gap-2'>
           <p className='font-semibold text-darkBlue dark:text-white'>
             Border Countries:
           </p>
-          <div className='flex items-center justify-between gap-2'>
-            <Button label='Uruguay' />
-            <Button label='Argentina' />
-            <Button label='Bolivia' />
+          <div className='flex items-center gap-2 flex-wrap'>
+            {bordersCountries ? bordersCountries.map((country) => <Button key={country.name.common} label={country.name.common} />) : <Button label='no H' />}
           </div>
         </div>
       </div>
