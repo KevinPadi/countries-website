@@ -25,7 +25,6 @@ function CountryDetails ({ data: { name, population, region, subregion, capital,
     }
   }, [borders])
 
-  console.log(bordersCountries ? bordersCountries.map((country) => console.log(country.name.common)) : 'none')
   return (
     <div className='w-full'>
       <h2 className='text-3xl font-extrabold mb-6'>{name.common}</h2>
