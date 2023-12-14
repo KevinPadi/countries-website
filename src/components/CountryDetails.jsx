@@ -13,7 +13,7 @@ function CountryDetails ({ data: { name, population, region, subregion, capital,
   const [bordersCountries, setBordersCountries] = useState([])
 
   useEffect(() => {
-    if (borders.length > 1) {
+    if (borders.length > 0) {
       fetch(`https://restcountries.com/v3.1/alpha?codes=${borders.join(',')},?fields=name`)
         .then(response => response.json())
         .then(data => {
