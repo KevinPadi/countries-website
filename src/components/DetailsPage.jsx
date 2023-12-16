@@ -24,7 +24,7 @@ function DetailsPage () {
   }, [])
 
   return (
-    <section className='w-full max-w-[400px] sm:max-w-[574px] lg:max-w-[865px] xl:max-w-[1185px] mt-28 md:mt-28 pb-10 md:pb-20'>
+    <section className='w-full max-w-[400px] sm:max-w-[574px] lg:max-w-[1105px] xl:max-w-[1185px] mt-28 md:mt-28 pb-10 md:pb-20'>
       <div className='space-y-10 px-5'>
         <DetailsSectionHeader />
         {loading
