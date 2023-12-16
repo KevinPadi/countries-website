@@ -1,7 +1,7 @@
 import { Skeleton } from '@nextui-org/react'
 
 function CardSkeleton () {
-  const numberOfCards = 8
+  const numberOfCards = 32
   const renderCardSkeletons = () => {
     const skeletons = []
     for (let i = 0; i < numberOfCards; i++) {
