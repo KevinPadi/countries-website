@@ -1,4 +1,3 @@
-import Button from './Button'
 import { useState, useEffect } from 'react'
 
 function CountryDetails ({ data: { name, population, region, subregion, capital, currencies, languages, borders, tld } }) {
@@ -65,9 +64,19 @@ function CountryDetails ({ data: { name, population, region, subregion, capital,
           <p className='font-semibold text-darkBlue dark:text-white'>
             Border Countries:
           </p>
-          <div className='flex items-center gap-2 flex-wrap'>
-            {bordersCountries ? bordersCountries.map((country) => <Button key={country.name.common} label={country.name.common} />) : <Button label='no H' />}
-          </div>
+          <nav className='flex items-center gap-2 flex-wrap'>
+            {bordersCountries.length === 0
+              ? <div className='flex items-center text-xs font-semibold px-5 h-8 bg-white dark:bg-darkBlue text-darkBlue dark:text-white drop-shadow-md rounded-sm'>This country has no borders</div>
+              : bordersCountries.map((country, index) => (
+                <div
+                  key={index}
+                  className='flex items-center text-xs font-semibold px-5 h-8 bg-white dark:bg-darkBlue text-darkBlue dark:text-white drop-shadow-md rounded-sm'
+                >
+                  {country.name.common}
+                </div>
+              ))}
+
+          </nav>
         </div>
       </div>
     </div>
