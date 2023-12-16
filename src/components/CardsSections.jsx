@@ -2,9 +2,9 @@ import { React, useState, useEffect } from 'react'
 import CountryCard from './CountryCard'
 import CountryFilterSection from './CountryFilterSection'
 import { Link } from 'wouter'
+import CardSkeleton from './CardSkeleton'
 
 function CardsSections () {
-  // TODO: hacer el skeleton / botón back / recargar la página y que no se rompa / frontera de los países / hacer que al estar la query de region vacia traiga todos los países
   const [searchCountry, setSearchCountry] = useState('')
   const [data, setData] = useState([])
 
@@ -50,8 +50,8 @@ function CardsSections () {
       <CountryFilterSection searchCountry={searchCountry} setSearchCountry={setSearchCountry} onSelect={getCountryByRegion} />
       <section className='w-full sm:max-w-[574px] lg:max-w-[865px] xl:max-w-[1185px] flex sm:flex-col justify-center sm:justify-between px-5 sm:px-0' style={{ scrollbarGutter: 'stable' }}>
         <ul className='grid grid-cols-[repeat(auto-fit,minmax(235px,1fr))] gap-x-20 gap-y-10'>
-          {data === null
-            ? <p>no cargó</p>
+          {data.length === 0
+            ? <CardSkeleton />
             : data.filter(country =>
               country.name.common
                 .toLowerCase()
