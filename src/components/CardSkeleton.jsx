@@ -8,7 +8,7 @@ function CardSkeleton () {
       skeletons.push(
         <article
           key={i}
-          className='w-[235px] h-[350px] bg-white dark:bg-darkBlue rounded-md overflow-hidden shadow-lg border-1 border-gray-200 dark:border-0 hover:scale-105 transition-transform'
+          className='w-[235px] h-[350px] bg-white dark:bg-[#2e2e33] rounded-md overflow-hidden shadow-lg border-1 border-gray-200 dark:border-0 hover:scale-105 transition-transform'
         >
           <Skeleton>
             <div className='w-full h-40 max-h-40 overflow-hidden'>
