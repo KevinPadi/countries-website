@@ -18,27 +18,27 @@ function CountryDetailsSkeleton () {
               <div className='flex flex-col gap-2 text-start'>
                 <div className='flex gap-1 items-center'>
                   {/* <p className='font-semibold text-darkBlue dark:text-white'>Native Name:</p> */}
-                  <Skeleton className='w-48 h-4'>
+                  <Skeleton className='w-48 h-4 rounded-sm'>
                     <p className='' />
                   </Skeleton>
                 </div>
                 <div className='flex gap-1'>
-                  <Skeleton className='w-36 h-4'>
+                  <Skeleton className='w-36 h-4 rounded-sm'>
                     <p className='' />
                   </Skeleton>
                 </div>
                 <div className='flex gap-1'>
-                  <Skeleton className='w-32 h-4'>
+                  <Skeleton className='w-32 h-4 rounded-sm'>
                     <p className='' />
                   </Skeleton>
                 </div>
                 <div className='flex gap-1'>
-                  <Skeleton className='w-44 h-4'>
+                  <Skeleton className='w-44 h-4 rounded-sm'>
                     <p className='' />
                   </Skeleton>
                 </div>
                 <div className='flex gap-1'>
-                  <Skeleton className='w-28 h-4'>
+                  <Skeleton className='w-28 h-4 rounded-sm'>
                     <p className='' />
                   </Skeleton>
                 </div>
@@ -46,17 +46,17 @@ function CountryDetailsSkeleton () {
             </div>
             <div className='flex flex-col gap-2 text-start'>
               <div className='flex gap-1'>
-                <Skeleton className='w-32 h-4'>
+                <Skeleton className='w-32 h-4 rounded-sm'>
                   <p className='' />
                 </Skeleton>
               </div>
               <div className='flex gap-1'>
-                <Skeleton className='w-28 h-4'>
+                <Skeleton className='w-28 h-4 rounded-sm'>
                   <p className='' />
                 </Skeleton>
               </div>
               <div className='flex gap-1'>
-                <Skeleton className='w-40 h-4'>
+                <Skeleton className='w-40 h-4 rounded-sm'>
                   <p className='' />
                 </Skeleton>
               </div>
@@ -64,17 +64,17 @@ function CountryDetailsSkeleton () {
           </div>
           <div>
             <div className='flex lg:w-full items-center flex-col sm:flex-row gap-5 lg:gap-2'>
-              <Skeleton className='w-32 h-4'>
+              <Skeleton className='w-32 h-4 rounded-sm'>
                 <p className='' />
               </Skeleton>
               <nav className='flex items-center gap-2 flex-wrap'>
-                <Skeleton className='w-24 h-6'>
+                <Skeleton className='w-24 h-6 rounded-md'>
                   <div className='flex items-center text-xs font-semibold px-5 h-8 bg-white dark:bg-darkBlue text-darkBlue dark:text-white drop-shadow-md rounded-sm' />
                 </Skeleton>
-                <Skeleton className='w-24 h-6'>
+                <Skeleton className='w-24 h-6 rounded-md'>
                   <div className='flex items-center text-xs font-semibold px-5 h-8 bg-white dark:bg-darkBlue text-darkBlue dark:text-white drop-shadow-md rounded-sm' />
                 </Skeleton>
-                <Skeleton className='w-24 h-6'>
+                <Skeleton className='w-24 h-6 rounded-md'>
                   <div className='flex items-center text-xs font-semibold px-5 h-8 bg-white dark:bg-darkBlue text-darkBlue dark:text-white drop-shadow-md rounded-sm' />
                 </Skeleton>
               </nav>
