@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [FrontendMentor](https://www.frontendmentor.io/solutions/rest-countries-solution-using-react-and-tailwindcss-2Woez5lDU_)
+- Live Site URL: [Vercel](https://countries-website-five.vercel.app/)
 
 ## My process
 
